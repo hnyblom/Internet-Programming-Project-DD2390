@@ -1,0 +1,41 @@
+table.tablesorter {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #CDCDCD;
+	color: #FFFFCC;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #662900;
+	border: 1px solid #803300;
+	font-size: 1.5em;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	background-color: #f8f8e6; 
+	font-size: 1.3em;
+	color: #3D3D3D;
+	padding: 4px;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #664300;
+}

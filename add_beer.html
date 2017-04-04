@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./Stylesheets/overall.css">
+		<link rel="stylesheet" type="text/css" href="./Stylesheets/add_beer.css">
+		<ul>
+			<li><a href="frontpage.html" class="menu">Home</a></li> 		
+			<li><a href="cellar.html" class="menu">Cellar</a></li>
+			<li><a href="all_beer.html" class="menu">All beer</a></li>
+			<li><a href="add_to_cellar.html" class="menu">Add to Cellar</a></li>
+		</ul>
+	</head>
+	<body>
+	<div id="square">
+		<h2>Add a beer to the database</h2>
+		<div id="content">
+		<form id="beer_form" method="post" action="./DB/insert_new_beer.php">
+			<p class="form">Name</p><input type="text" name="name" placeholder="Leon" required><br>
+			<p class="form">Year</p><input type="number" name="year" placeholder="1992" step="1" min="0000" max="9999"><br>
+			<p class="form">ABV</p><input type="number" name="alcohol" placeholder="5.2" step="0.01" required><br>
+			<p class="form">Style</p><input type="text" name="style" placeholder="Belgian Pale Ale" required><br>
+			<p class="form" id="brew">Brewery</p>
+			<select name="brewery" id="selector" required>
+			    <option value="" disabled selected>--</option>
+			</select>
+			<input id="add_new_brewery_button" type="button" value="Add new">
+			<p class="form" id="brew_name">Brewery name</p><input type="text" name="brewery_name" id="brewery_name" class="hidden" placeholder="Omnipollo"><br>
+			<p class="form" id="brew_country">Brewery country</p><input type="text" name="brewery_country" id="brewery_country" class="hidden" placeholder="Sweden">
+			<input type="submit">
+		</form>
+		</div>
+	</div>
+
+
+		<script type="text/javascript">
+			document.getElementById("add_new_brewery_button").onclick = function () {
+				document.getElementById("selector").style.display = 'none';
+				document.getElementById("selector").required = false;
+				document.getElementById("add_new_brewery_button").style.display = 'none';
+				document.getElementById("brew").style.display = 'none';
+				document.getElementById("brew_name").style.display = 'inline-block';
+				document.getElementById("brew_country").style.display = 'inline-block';
+				document.getElementById("brewery_name").style.display = 'inline';
+				document.getElementById("brewery_name").required = true;
+				document.getElementById("brewery_country").style.display = 'inline';
+				document.getElementById("brewery_country").required = true;
+			};
+		</script>
+		<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="./script/get_breweries.js"></script>
+	</body>
+</html>

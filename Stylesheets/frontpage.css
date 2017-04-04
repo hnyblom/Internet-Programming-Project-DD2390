@@ -1,0 +1,14 @@
+body {
+	background-image: url("./../Image/beer.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+h1 {
+	font: bold 10em serif;
+	text-align: center;
+	text-shadow: 5px 5px #000;
+	color: #333333;
+	margin-left: 20px;
+}

@@ -1,0 +1,24 @@
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+li{
+	float: left;	
+	display: inline;
+}
+a.menu:link, a.menu:visited {
+    display: block;
+    width: 160px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #000;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.menu:hover, a.menu:active {
+    background-color: #CCCCCC;
+}
